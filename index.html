@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湘景智养 AiGarden - 智能家庭养护系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Ultra Light Mode Palette */
+            --bg-color: #f4f4f0;
+            --text-main: #374151;
+            --text-muted: #9CA3AF;
+            --eco-green: #66BB6A;
+            --sky-blue: #4FC3F7;
+            --glass-bg: rgba(255, 255, 255, 0.4);
+            --glass-border: rgba(255, 255, 255, 0.6);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Neumorphism Utilities */
+        .neu-flat {
+            background: var(--bg-color);
+            box-shadow: 9px 9px 18px #d9d9d5, -9px -9px 18px #ffffff;
+            border-radius: 24px;
+        }
+
+        .neu-pressed {
+            background: var(--bg-color);
+            box-shadow: inset 6px 6px 12px #d9d9d5, inset -6px -6px 12px #ffffff;
+            border-radius: 16px;
+        }
+
+        .neu-btn {
+            background: var(--bg-color);
+            box-shadow: 6px 6px 12px #d9d9d5, -6px -6px 12px #ffffff;
+            transition: all 0.3s ease;
+            border-radius: 16px;
+        }
+
+        .neu-btn:active {
+            box-shadow: inset 4px 4px 8px #d9d9d5, inset -4px -4px 8px #ffffff;
+            transform: translateY(1px);
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+        }
+
+        /* Animations */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(102, 187, 106, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(102, 187, 106, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(102, 187, 106, 0); }
+        }
+        
+        .animate-pulse-green {
+            animation: pulse-green 2s infinite;
+        }
+
+        .text-shadow-sm {
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
